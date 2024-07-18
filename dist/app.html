@@ -6,42 +6,403 @@
     <title>Document</title>
     
     <style>
-        .ml6 {
-        text-align:center ;
-        background-color: pink;
+        body{
+            background-color: #F5F2D3;
+        }
+        form {
+            background-color: #F5F2D3;
+            display: flex;
+            width: 950px;
+        
+            flex-direction: column;
+            justify-content: stretch;
+            text-align: left;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        /* label {
+            display: flex;
+        } */
+
+        span {
+            font-size: 16px;
+            width: 100px;
+            margin-right: 1rem;
+
+        }
+         h1 span {
+            font-size: 50px;
+            width: 100px;
+            margin-right: 1rem;
+
+        }
+
+        h1 {
+            font-family: "vdl-logojrpop-shadow", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+
+        input {
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 9px 20px 10px 10px;
+        }
+
+        select {
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 9px 20px 10px 10px;
+        }
+
+        button {
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 9px 20px 10px 10px;
+        }
+
+        p{
+            text-align: center;
+            margin-bottom: 15px;
+        
+        }
+
+        #alert1 {
+            color: red;
+            padding-bottom: 15px;
+        }
+
+        #alert2 {
+            color: red;
+            padding-bottom: 15px;
+        }
+
+        #alert3 {
+            color: red;
+            padding-bottom: 15px;
+        }
+
+        #alert4 {
+            color: red;
+            padding-bottom: 15px;
+        }
+
+        #alert5 {
+            color: red;
+            padding-bottom: 15px;
+        }
+
+        #alert6 {
+            color: red;
+            padding-bottom: 15px;
+        }
+        #alert7 {
+            color: red;
+            padding-bottom: 15px;
+        }
+        /* #alert8 {
+            color: red;
+            padding-bottom: 15px;
+        } */
+
+        .radiobottonarea {
+            background-color: white;
+            border: 1px solid black;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 9px 20px 10px 10px;
+        }
+
+        .radiobotton {
+            background-color: white;
+            border: 1px solid black;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 9px 20px 10px 10px;
+        }
+      
+        /* .ml6 {
+
         position: relative;
         height: 950px;
         font-weight: 900;
         font-size: 300px; 
-        }
-
-        .ml6 .text-wrapper {
-        position: relative;
-        display: inline-block;
-      }
-        /* padding-top: 0.2em;
-        padding-right: 0.05em;
-        padding-bottom: 0.1em;
-        overflow: hidden;
         } */
 
+        /* .ml6 .text-wrapper {
+        position: relative;
+        display: inline-block;
+      } 
+      */
         .ml6 .letter {
         display: inline-block;
-        line-height: 1px;
-        }
+        line-height: 5px;
+        } 
     </style>
 
 </head>
 <body>
+  <form onsubmit="submitInput(event)" novalidate>
+
+    <header>
+
     <h1 class="ml6">
-        <span class="text-wrapper">
-          <span class="letters">TODAY</span>
-        </span>""
-    </h1>
+      <span class="text-wrapper">
+        <span class="letters">小学生の水泳体験教室の<br>お申し込みフォーム<br></span>
+      </span>
+  </h1>
+        <!-- <h1>小学生の水泳体験教室の
+            <br>お申し込みフォーム<br>
+        </h1> -->
+    </header>
+    <p>お子様のレベルに合わせて安心のサポート！
+    <br>スイミングが初めてのお子様、苦手意識を持っているお子様にも安心してご参加いただける環境を整えてお待ちしております。<br></p>
+
+
+    <label for="name">
+        <span>参加者のお名前</span>
+    </label>
+
+    <input id="text" type="text" name="text" required></input>
+    <div id="alert1" hidden>名前が入力されていません</div>
+
+    <label>
+        <span>参加者の生年月日</span>
+    </label>
+    <input id="date" type="date" name="date" required></input>
+    <div id="alert6" hidden>日付が選択されていません</div>
+
+    <label>
+        <span>参加者の性別</span>
+        <div class="radiobottonarea">
+            <div class="radio">
+                <input type="radio" name="radio"></input>
+                <lavel>女児</lavel>
+            </div>
+            <div class="radio">
+                <input type="radio" name="radio"></input>
+                <lavel>男児</lavel>
+            </div>
+            <div class="radio">
+                <input type="radio" name="radio"></input>
+                <lavel>その他</lavel>
+            </div>
+        </div>
+    </label>
+
+    <label>
+      <span>学年</span>
+  </label>
+ 
+  <select id="select"type="select" name="select" required>
+      <option value="">選択してください</option>
+      <option value="1">小学1年生</option>
+      <option value="2">小学2年生</option>
+      <option value="3">小学3年生</option>
+      <option value="4">小学4年生</option>
+      <option value="5">小学5年生</option>
+      <option value="6">小学6年生</option>
+  </select>
+  <div id="alert7" hidden>学年が選択されていません</div>
+
+
+  <label>
+      <span>ご利用メニューの選択</span>
+
+      <div class="radiobotton" id="radiobotton" >
+          <div class="radio">
+              <input type="radio" name="radio1"></input>
+              <lavel>初めてのプールコース（目標:水になれる）</lavel>
+          </div>
+          <div class="radio">
+              <input type="radio" name="radio1"></input>
+              <lavel>レベル1コース（目標:バタ足25mを泳げるようになる）</lavel>
+          </div>
+          <div class="radio">
+              <input type="radio" name="radio1"></input>
+              <lavel>レベル2コース（目標:クロール25mを泳げるようになる）</lavel>
+          </div>
+          <div class="radio">
+              <input type="radio" name="radio1"></input>
+              <lavel>レベル3コース（ 目標:背泳ぎ25mを泳げるようになる）</lavel>
+          </div>
+          <div class="radio">
+              <input type="radio" name="radio1"></input>
+              <lavel>レベル4コース（ 目標:平泳ぎ25mを泳げるようになる）</lavel>
+          </div>
+          <div class="radio">
+              <input type="radio" name="radio1"></input>
+              <lavel>レベル5コース（ 目標:バタフライ25mを泳げるようになる）</lavel>
+          </div>
+
+      </div>
+      <!-- <div id="alert5" hidden>コースが選択されていません</div> -->
       
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <!-- <div>anime</div>
-    aiueo -->
+  </label>
+
+  <label>
+      <span>保護者のお名前</span>
+  </label>
+  <input id="text1" type="text1" name="text1" required></input>
+  <div id="alert2" hidden>名前が入力されていません</div>
+
+  <label>
+      <span>保護者の方のお電話番号(ハイフンなし)</span>
+  </label>
+  <input id="tel" type="tel" name="tel" required oninput="onInput(event)"></input>
+  <div id="alert3" hidden>電話番号が入力されていません</div>
+
+  <label>
+      <span>保護者の方のメールアドレス</span>
+  </label>
+  <input id="email" type="email" name="email" required></input>
+  <div id="alert4" hidden>メールアドレスが入力されていません</div>
+
+  <label>
+      <span>事前に伝えておきたいことがあればご記入ください（自由記述）</span>
+  </label>
+
+  <input type="message" name="message"></input>
+
+  <div class="cheakbox">
+      <input id="checkbox" type="checkbox" name="checkbox" required></input>
+      <lavel>プライバシーポリシーに同意します。</lavel>
+  </div>
+  <!-- <div id="alert8" hidden>チェックボックスが選択されていません</div> -->
+  
+
+  <button type="submit">送信</button>
+
+</form>
+
+
+<script>
+  function onSubmit(event) {
+      event.preventDefault();
+      let formData = new FormData(event.target);
+      for (data of formData) {
+          console.log(data[0], data[1]);
+      }
+  }
+</script>
+<script>
+  (function (d) {
+      var config = {
+          kitId: 'qpr4lik',
+          scriptTimeout: 3000,
+          async: true
+      },
+          h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+  })(document);
+</script>
+
+<!-- 電話 -->
+<script>
+  let tel = document.getElementById("tel");
+  let prevInputValue = tel.value;
+
+  function onInput(event) {
+      if (
+          event.data == "-") {
+          tel.value = prevInputValue;
+          window.alert("ハイフンは入力できません")
+
+      } else {
+          prevInputValue = tel.value;
+      }
+  }
+</script>
+
+
+<!-- エラー -->
+<script>
+  function submitInput(event) {
+  event.preventDefault();
+
+      let text = document.getElementById("text");
+      let alert1 = document.getElementById("alert1");
+      if (text.value != "") {
+          alert1.hidden = true;
+      } else {
+          alert1.hidden = false;
+      }
+
+      let text1 = document.getElementById("text1");
+      let alert2 = document.getElementById("alert2");
+      if (text1.value != "") {
+          alert2.hidden = true;
+      } else {
+          alert2.hidden = false;
+      }
+
+      let tel = document.getElementById("tel");
+      let alert3 = document.getElementById("alert3");
+      if (tel.value != "") {
+          alert3.hidden = true;
+      } else {
+          alert3.hidden = false;
+      }
+
+      let email = document.getElementById("email");
+      let alert4 = document.getElementById("alert4");
+      if (email.value != "") {
+          alert4.hidden = true;
+      } else {
+          alert4.hidden = false;
+      }
+
+      // let radiobotton = document.getElementById("radiobotton");
+      // let alert5 = document.getElementById("alert5");
+      // if (radiobotton.value != "") {
+      //     alert5.hidden = true;
+      // } else {
+      //     alert5.hidden = false;
+      // }
+      
+      // let formData = new FormData(event.currentTarget)
+      // let alert5 = document.getElementById("alert5");
+      // // console.log(formDate.get("radio1"));
+      // if(formData.get("radio1")!="on"){
+      //     alert5.hidden = true;
+      // }else {
+      //     alert5.hidden = false;
+      // }
+
+      let date = document.getElementById("date");
+      let alert6 = document.getElementById("alert6");
+      if (date.value != "") {
+          alert6.hidden = true;
+       } else {
+      alert6.hidden = false;
+      }
+      
+      let select = document.getElementById("select");
+      console.log(select);
+      let alert7 = document.getElementById("alert7");
+      if (select.value != "") {
+          alert7.hidden = true;
+      } else {
+          alert7.hidden = false;
+      }
+
+      // let  cheakbox= document.getElementById("cheakbox");
+      // console.log(cheakbox);
+      // let alert8 = document.getElementById("alert8");
+      // if (cheakbox.value != "") {
+      //     alert8.hidden = true;
+      // } else {
+      //     alert8.hidden = false;
+      // }
+    }
+</script>
+
 	<script src ="app.js"></script>
 
 
