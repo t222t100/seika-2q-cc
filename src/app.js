@@ -27,3 +27,15 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+  anime.timeline()
+   .add({
+    targets: '.image_item',
+    translateX:750,
+    scale: 1,
+
+
+   })
+
+
+ 
